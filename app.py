@@ -5,7 +5,7 @@ import joblib
 from groq import Groq 
 import os
 
-model = Groq()
+model = Groq(api_key=os.environ["GROQ_API_KEY"])
 modelPKL = joblib.load("dbs.pkl")
 
 app = Flask(__name__)
